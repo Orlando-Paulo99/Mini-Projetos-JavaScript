@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Dado</title>
+
+    <style>
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+         img{
+            margin-top: 11%;
+            position: relative;
+            right: 150px;
+            top: 50px;
+        }
+        body{
+            background-color:red;
+        }
+
+    </style>
+</head>
+<body>  
+    <div>
+        <h1>Jogo do Dado</h1>
+        <img src="face1.png" alt="" id="face">
+    
+    </div>
+   
+    <script>
+        var sorteio=Math.floor(Math.random()*6+1);
+
+        switch(sorteio){
+            case 1:
+                document.getElementById("face").src="face1.png";
+                break;
+            case 2:
+                document.getElementById("face").src="face2.png";
+                break;
+            case 3:
+                document.getElementById("face").src="face3.png";
+                break;
+            case 4:
+                document.getElementById("face").src="face4.png";
+                break;
+            case 5:
+                document.getElementById("face").src="face5.png";
+                break;
+            case 6:
+                document.getElementById("face").src="face6.png";
+                break;
+            default:
+                break;
+
+        }
+    </script>
+</body>
+</html>

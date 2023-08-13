@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lampada</title>
+    <style>
+        .colorRgb{
+            color:rgb(0, 166, 255);
+        }
+        .hsl{
+            color: hsl(251, 10%, 50%);
+        }
+        .testeOpacity{
+            background-color: #9999;
+            color: black;
+            opacity: 0.6;
+
+        }
+    </style>
+</head>
+<body>
+    <h1 class="colorRgb">projeto Lampada</h1>
+
+    <h1 class="hsl">testando o hsl</h1>
+    <h1 class="testeOpacity">opacity teste </h1>
+    <img src="off.jpg" alt="" id="lamp">
+     <form action="">
+        <input type="button" value="ligar" onclick="on()">
+        <input type="button" value="desligar" onclick="off()">
+        <input type="button" value="piscar" onclick="blink()">
+     </form>
+
+     
+     <script>
+        function on(){
+            document.getElementById("lamp").src="on.jpg"
+        }
+        function off(){
+            document.getElementById("lamp").src="off.jpg"
+        }
+        function blink(){
+            let intervalo=0;
+            let contador=0;
+            while(contador<10){
+                intervalo +100;
+                setTimeout(" document.getElementById('lamp').src='on.jpg';",intervalo);
+                intervalo +=50;
+                setTimeout(" document.getElementById('lamp').src='off.jpg';",intervalo);
+                contador ++;
+            }
+        }
+     </script>
+    
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!--Auak #5-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora flex</title>
+    <style>
+        div{
+            display: flex;
+            justify-content: center;
+           
+        }
+
+        img{
+             position: relative;
+            margin-top: 100px;
+            right: 100px; 
+        }
+        h1{
+            position: relative;
+            left: 160px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        body{
+            background-color:deepskyblue;
+        }
+
+        form{
+            position: relative;
+            margin-top: 40px;
+            left: 350px;
+        }
+        input{
+            border-radius: 8px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+         <h1>Calculadora Flex</h1>
+         
+         <img src="neutro.png" alt=""id="status">
+        
+    </div>
+    <form name="frmFlex" >
+            <input type="text" placeholder="etanol" size="" name="txtEtanol">
+            <input type="text" placeholder="gaoslina " name="txtGasolina">
+            <input type="button" value="vantagem" onclick="calcular()">
+            <input type="reset" value="limpar" onclick=" resetar()">
+        </form>
+   
+        <script >
+            
+var etanol,gasolina;
+
+function calcular(){
+	etanol = parseFloat(frmFlex.txtEtanol.value.replace(",","."));
+	gasolina = parseFloat(frmFlex.txtGasolina.value.replace(",","."));
+	if (etanol < 0.7 * gasolina){
+		document.getElementById("status").src="etanol.png";
+	}else{
+		document.getElementById("status").src="gasolina.png";
+	}
+}
+
+function  resetar(){
+    document.getElementById("status").src="neutro.png";
+}
+        </script>
+</body>
+</html>
+
